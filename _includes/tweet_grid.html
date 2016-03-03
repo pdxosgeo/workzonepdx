@@ -1,14 +1,19 @@
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <section id="workzonewtf">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
+                    <h2><a href="https://twitter.com/search?q=%23workzonewtf&lang=en">#workzonewtf</a></h2>
                     <hr class="star-primary">
                 </div>
             </div>
-            <div class="row">
+            <div class="row wtf-grid">
+                <div class="col-lg-8 col-lg-offset-2 text-center wtf-loading">
+                    <h3><i class="fa fa-refresh fa-spin"></i> Loading...</h3>
+                </div>
+                <div class="col-sm-4 portfolio-item wtf-tpl"></div>
+                {% comment %}
                 {% for post in site.posts %}
                     <div class="col-sm-4 portfolio-item">
                         <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
@@ -21,6 +26,7 @@
                         </a>
                     </div>
                 {% endfor %}
+                {% endcomment %}
             </div>
         </div>
     </section>
