@@ -2,11 +2,13 @@
 <html>
     {% include head.html %}
     <body id="page-top" class="index">
+
     {% include nav.html %}
     {% include header.html %}
-    {% include portfolio_grid.html %}
+    {% include tweet_grid.html %}
     {% include about.html %}
 
+    {% comment %}
     {% if site.contact == "static" %}
     {% include contact_static.html %}
     {% elsif site.contact == "disqus" %}
@@ -14,6 +16,7 @@
     {% else %}
     {% include contact.html %}
     {% endif %}
+    {% endcomment %}
 
     {% include footer.html %}
     {% include modals.html %}

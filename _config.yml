@@ -1,10 +1,11 @@
 # Site settings
 title: Vision Zero Work Zones
 email: your-email@domain.com
-url: https://workzonepdx.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-skills: "#workzonewtf"
-meta_author: LastName FirstName
+url: https://pdxosgeo.github.io/workzonepdx
+description: "Vision Zero Work Zones."
+tagline: "Shining a light on pedestrian safety in work zones across Portland."
+meta_author: PDX OSGeo
+baseurl: /workzonepdx
 
 # Google webmaster tools
 google_verify:
@@ -31,10 +32,10 @@ color:
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
-  location: Location
-  social: Around the Web
-  credits: Credits
+  copyright: '
+    All content licensed under <a href="https://creativecommons.org/licenses/by/3.0/us/">CC BY 3.0 US</a>
+    by <a href="http://oregonwalks.org/">Oregon Walks</a>.
+  '
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
