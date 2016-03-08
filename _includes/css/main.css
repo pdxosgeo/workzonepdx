@@ -133,6 +133,12 @@ header .intro-text .skills {
 
     .navbar-fixed-top .navbar-brand {
         font-size: 2em;
+        padding-top: 0px;
+        margin-top: -10px;
+    }
+
+    .navbar-fixed-top .navbar-brand img {
+        height: 80px;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
@@ -140,10 +146,13 @@ header .intro-text .skills {
 
     .navbar-fixed-top.navbar-shrink {
         padding: 10px 0;
+        margin-top: 0px;
     }
 
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
+    .navbar-fixed-top.navbar-shrink .navbar-brand img {
         font-size: 1.5em;
+        padding-top: 14px;
+        height: 64px;
     }
 }
 
@@ -191,6 +200,14 @@ section.success {
 
     section.first {
         padding-top: 75px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding-top: 10px;
+    }
+    .navbar-fixed-top .navbar-brand img {
+        padding-top: 0px;
+        height: 40px;
     }
 }
 
