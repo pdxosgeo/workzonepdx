@@ -27,7 +27,8 @@
   window.onload = function() {
     Tabletop.init({
       key: SPREADSHEET_KEY,
-      callback: sheetToTweets
+      callback: sheetToTweets,
+      query: 'status = accepted'
     })
   };
 })()
