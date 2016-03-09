@@ -5,7 +5,6 @@ url: https://pdxosgeo.github.io/workzonepdx
 description: "Vision Zero Work Zones."
 tagline: "Shining a light on construction zones obstructing the bicycle and pedestrian network."
 meta_author: "Oregon Walks"
-baseurl: /workzonepdx
 
 # Google webmaster tools
 google_verify:
