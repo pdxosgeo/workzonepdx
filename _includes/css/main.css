@@ -98,7 +98,7 @@ header img {
     margin: 0 auto 20px;
 }
 
-header .intro-text .name {
+.header-text .name {
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -106,7 +106,7 @@ header .intro-text .name {
     font-weight: 700;
 }
 
-header .intro-text .skills {
+.header-text .blurb {
     font-size: 1.25em;
     font-weight: 300;
 }
@@ -117,11 +117,11 @@ header .intro-text .skills {
         padding-bottom: 100px;
     }
 
-    header .intro-text .name {
+    .header-text .name {
         font-size: 4.75em;
     }
 
-    header .intro-text .skills {
+    .header-text .blurb {
         font-size: 1.75em;
     }
 }
@@ -269,6 +269,10 @@ section.success {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
+}
+
+.btn-dark {
+    margin: 15px;
 }
 
 .btn-outline {
