@@ -4,7 +4,7 @@
   var clearTpl = $('.clearfix-tpl').clone();
 
   function sheetToTweets (data, tabletop) {
-    var elements = data.workzonewtf.elements;
+    var elements = data;
     $('.social-tpl').remove();
     $('.clearfix-tpl').remove();
     $('.wtf-loading').remove();
@@ -36,7 +36,10 @@
     Tabletop.init({
       key: SPREADSHEET_KEY,
       callback: sheetToTweets,
-      query: 'status = accepted'
+      query: 'status = accepted',
+      simpleSheet: true,
+      orderby: 'timestamp',
+      reverse: true
     })
   };
 })()
