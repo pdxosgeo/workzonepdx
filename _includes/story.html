@@ -6,12 +6,27 @@
                     <div class="header-text">
                         <h2>Stories</h2>
                         <hr class="star-light">
-                        <span class="blurb">Firsthand experiences with closures</span>
+                        <span class="blurb"> Personal encounters with sidewalk and road closures.</span>
                     </div>
                 </div>
                 <div class="page-scroll col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-primary btn-outline">Share Your Story
-                    </a>
+                    <button type="button" class="btn btn-primary btn-lg btn-outline" data-toggle="modal" data-target="#formModal">
+                      Share Your Story
+                    </button>                    
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <iframe src="https://docs.google.com/forms/d/1CbVha7s18a47V8pFgYC0KZM8VB2GTEfYIGyPzCTLLWQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close Form</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
