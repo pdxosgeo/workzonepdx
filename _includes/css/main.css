@@ -25,6 +25,15 @@ a.active {
     color: #{{ site.color.primary }};
 }
 
+a.dark,
+a.dark:hover,
+a.dark:focus,
+a.dark:active,
+a.dark.active {
+    outline: 0;
+    color: #{{ site.color.secondary }};
+}
+
 h1,
 h2,
 h3,
