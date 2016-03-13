@@ -1,0 +1,13 @@
+#map { 
+  position:relative; 
+  height: 600px; 
+  width:100%; 
+}
+
+#map-tweet {
+  width: 220px;
+}
+
+.mapboxgl-popup-content {
+  padding: 10px 10px 0px;
+}
