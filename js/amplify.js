@@ -43,6 +43,7 @@
       container: 'map',
       style: 'mapbox://styles/twelch/cilopb569001wa7ltp230rzkf',
       center: [-122.667040, 45.513421],
+      maxBounds: [[-123.298874, 45.252655],[-122.004547, 45.739256]],
       zoom: 10.5,
     });
 
