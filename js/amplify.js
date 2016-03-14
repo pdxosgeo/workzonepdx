@@ -15,18 +15,25 @@
     $('.wtf-loading').remove();
 
     for (var i = 0; i < elements.length; i++) {
-      addOembed(elements[i]);
+      addOembed(elements[i], elements[i].source);
       if ((i+1) % 3 == 0) {
         addClearfix();
       }
     }
   }
 
-  function addOembed (str) {
+  function addOembed (str, source) {
     if (str.oembed !== "") {
       try {
         var oembed = JSON.parse(str.oembed);
-        tpl.clone().html(oembed.html).appendTo('.social-grid');
+        var newEmbed = tpl.clone().html(oembed.html);
+        newEmbed.appendTo('.social-grid');
+        
+        if (source === 'twitter') {            
+          twttr.widgets.load(newEmbed);
+        } else {
+          instgrm.Embeds.process(newEmbed);
+        }
       } catch (e) {
         throw Error(e);
       }
@@ -43,6 +50,7 @@
       container: 'map',
       style: 'mapbox://styles/twelch/cilopb569001wa7ltp230rzkf',
       center: [-122.667040, 45.513421],
+      maxBounds: [[-123.298874, 45.252655],[-122.004547, 45.739256]],
       zoom: 10.5,
     });
 
@@ -55,6 +63,8 @@
             parseFloat(post.longitude), 
             parseFloat(post.latitude)
           ], {
+            postid: post.postid,
+            source: post.source,
             oembed: JSON.parse(post.oembed)
           });
           postPoints.push(postPoint);
@@ -101,20 +111,30 @@
       var popup = new mapboxgl.Popup();
       map.on('click', function (e) {
         map.featuresAt(e.point, {
-          radius: 10,
+          radius: 16,
           includeGeometry: true,
           layer: ['non-cluster-markers']
-        }, function (err, features) {
-          if (err || !features.length || features[0].properties['cluster']) {
+        }, function (err, posts) {
+          if (err || !posts.length || posts[0].properties['cluster']) {
             popup.remove();
             return;
           }
 
-          var feature = features[0];
-          popup.setLngLat(feature.geometry.coordinates)
-            .setHTML('<div id="map-tweet">'+feature.properties.oembed.html+'</div>')
+          var post = posts[0];
+          var popClass = post.properties.source + '-popup';
+          var embedDiv = $("<div/>").addClass(popClass)[0];
+          embedDiv.innerHTML = post.properties.oembed.html;
+          var embedDivStr = embedDiv.outerHTML;
+          popup.setLngLat(post.geometry.coordinates)
+            .setHTML(embedDivStr)
             .addTo(map);
-          twttr.widgets.load($('#map-tweet'));
+
+          if (post.properties.source === 'twitter') {            
+            twttr.widgets.load($('.twitter-popup')[0]);
+          } else {
+            instgrm.Embeds.process();
+          }
+          
         });
       });
 
