@@ -1,13 +1,19 @@
 #map { 
   position:relative; 
-  height: 600px; 
+  height: 500px; 
   width:100%; 
 }
 
-#map-tweet {
-  width: 220px;
+.twitter-popup {
+  width: 240px;
+  margin-bottom: -10px;
 }
 
 .mapboxgl-popup-content {
-  padding: 10px 10px 0px;
+  padding: 15px;
+}
+
+.instagram-popup {
+  width: 240px;
+  margin-top: 10px;
 }
