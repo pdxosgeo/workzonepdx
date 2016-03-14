@@ -120,6 +120,11 @@ header img {
     font-weight: 300;
 }
 
+.instruction {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;
@@ -133,6 +138,10 @@ header img {
     .header-text .blurb {
         font-size: 1.75em;
     }
+
+    .instruction {
+        font-size: 1.25em;
+    }    
 }
 
 @media(min-width:768px) {
@@ -220,6 +229,10 @@ section.success {
     .navbar-fixed-top .navbar-brand img {
         padding-top: 0px;
         height: 40px;
+    }
+
+    .header-text .instruction {
+        margin-top: 20px;
     }
 }
 
