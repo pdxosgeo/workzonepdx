@@ -4,20 +4,19 @@
 }
 
 .social-footer .btn-nav {
-  color: #666666;
-  background-color: #ffffff;
-  border-color: #95a5a6;
+  color: #fff;
+  background-color: #F09015;
+  border-color: #F09015;
 }
 
 .social-footer .btn-nav:hover {
-    background: #eee;
+  background: #F4C823;
+  border-color: #F4C823;
 }
 
 .social-footer {
   margin-top: 5px;
 }
-
-.btn-outline:hover
 
 #map { 
   position:relative; 
