@@ -1,3 +1,24 @@
+.social-grid {
+  clear: both;
+  min-height:510px;
+}
+
+.social-footer .btn-nav {
+  color: #666666;
+  background-color: #ffffff;
+  border-color: #95a5a6;
+}
+
+.social-footer .btn-nav:hover {
+    background: #eee;
+}
+
+.social-footer {
+  margin-top: 5px;
+}
+
+.btn-outline:hover
+
 #map { 
   position:relative; 
   height: 500px; 

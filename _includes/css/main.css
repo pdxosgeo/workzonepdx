@@ -122,7 +122,7 @@ header img {
 
 .instruction {
     font-size: 1.5em;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 @media(min-width:768px) {
@@ -293,7 +293,7 @@ section.success {
     }
 }
 
-.btn {
+.btn-main {
     margin: 15px;
 }
 
