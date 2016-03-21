@@ -1,47 +1,9 @@
 (function () {
   var SPREADSHEET_KEY = '1OGC0ecdyz4L2vTbt9USMarL0jHiBJvAYyVno6mnCe9s';
-  var tpl = $('.social-tpl').clone();
-  var clearTpl = $('.clearfix-tpl').clone();
 
   function loadWidgets(data, tabletop) {
-    loadSocialGrid(data);
+    $('.social-grid').socialgrid({limit:6, posts: data});
     loadMap(data);
-  }
-
-  function loadSocialGrid (posts) {
-    var elements = posts;
-    $('.social-tpl').remove();
-    $('.clearfix-tpl').remove();
-    $('.wtf-loading').remove();
-
-    for (var i = 0; i < elements.length; i++) {
-      addOembed(elements[i], elements[i].source);
-      if ((i+1) % 3 == 0) {
-        addClearfix();
-      }
-    }
-  }
-
-  function addOembed (str, source) {
-    if (str.oembed !== "") {
-      try {
-        var oembed = JSON.parse(str.oembed);
-        var newEmbed = tpl.clone().html(oembed.html);
-        newEmbed.appendTo('.social-grid');
-        
-        if (source === 'twitter') {            
-          twttr.widgets.load(newEmbed);
-        } else {
-          instgrm.Embeds.process(newEmbed);
-        }
-      } catch (e) {
-        throw Error(e);
-      }
-    }
-  }
-
-  function addClearfix () {
-    clearTpl.clone().appendTo('.social-grid');
   }
 
   function loadMap (posts) {
