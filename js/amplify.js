@@ -7,7 +7,7 @@
   }
 
   function loadMap (posts) {
-    mapboxgl.accessToken = 'pk.eyJ1IjoidHdlbGNoIiwiYSI6Il9pX3dtb3cifQ.YcYnsO0X2p3x0HpHPFfleg';
+    mapboxgl.accessToken = 'pk.eyJ1IjoidHdlbGNoIiwiYSI6ImNpcHloYnN0NzB5ZzNoMW5yd3Z4cjJ1eDQifQ.k48TV6SQlBb_9ctuj8Jrzg';
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/twelch/cilopb569001wa7ltp230rzkf',
